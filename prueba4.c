@@ -132,8 +132,8 @@ char * encontrar_carta(char directorio[30],int n){
       }
     }
       closedir(d);
-      return carta;
     }
+  return carta;
   }
 
 //Funcion que retorna una carta al azar desde el mazo con "tamanio" cantidad de cartas
