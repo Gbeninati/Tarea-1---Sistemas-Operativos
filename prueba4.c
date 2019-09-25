@@ -205,6 +205,7 @@ void eliminar_carta(char* origen, int carta_a_jugar){
 }
 
 int main(){
+  //Hola
   //crear_directorios();
   //crear_numeros1_9();
   //crear_0();
