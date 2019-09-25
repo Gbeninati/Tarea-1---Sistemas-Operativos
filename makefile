@@ -1,2 +1,2 @@
 all:
-	gcc -Wall prueba4.c -o prueba
+	gcc -Wall prueba4.c -o avance1
