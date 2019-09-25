@@ -25,6 +25,7 @@ void crear_numeros1_9(){
   }
 }
 
+//Funcion que crea las cartas 0's
 void crear_0(){
   char colores[4][25] = {" rojo.txt"," azul.txt"," amarillo.txt"," verde.txt"};
   int i;
@@ -36,6 +37,8 @@ void crear_0(){
   }
 }
 
+
+//Funcion para crear todos los directorios a utillizar
 void crear_directorios(){
   mkdir("Mazo",0700);
   mkdir("Jugador1",0700);
@@ -45,6 +48,7 @@ void crear_directorios(){
   mkdir("Juego",0700);
 }
 
+//Funcion que crea todas cartas que no son numeros
 void crear_especiales(){
   char colores[8][25] = {" rojo.txt"," azul.txt"," amarillo.txt"," verde.txt", " rojo (2).txt"," azul (2).txt"," amarillo (2).txt"," verde (2).txt"};
   int i;
@@ -90,10 +94,12 @@ void crear_especiales(){
   }
 }
 
+//Funcion que mueve un archivo de un directorio origen (directorio_origen) a uno de destino (directorio_destino)
 void mover_archivo(char directorio_origen[30], char directorio_destino[30]){
   rename(directorio_origen,directorio_destino);
 }
 
+//Funcion que lista en pantalla todos los archivos del directorio entregado
 void ver_archivos(char directorio[30]){
   DIR *d;
   struct dirent *dir;
@@ -108,6 +114,7 @@ void ver_archivos(char directorio[30]){
     }
 }
 
+//Funcion que recibe un directorio y un entero n, y entrega el archivo n-esimo de ese directorio
 char * encontrar_carta(char directorio[30],int n){
   DIR *d;
   int i = 0;
@@ -129,6 +136,7 @@ char * encontrar_carta(char directorio[30],int n){
     }
   }
 
+//Funcion que retorna una carta al azar desde el mazo con "tamanio" cantidad de cartas
 char* escoger_carta_random(int tamanio){
   srand(time(NULL));
   int n = rand() % tamanio;
@@ -137,6 +145,7 @@ char* escoger_carta_random(int tamanio){
   return carta;
 }
 
+//Funcion que reparte 7 cartas al azar a cada jugador. Mueve las cartas desde el directorio Mazo ak directorio del jugador
   void repartir_cartas(){
     int cont_tamanio = 0;
     int cont_cartas = 0;
@@ -186,6 +195,7 @@ char* escoger_carta_random(int tamanio){
     }
 }
 
+//Funcion utilizada para que el jugador juegue una carta de su mano y esta se mueva al directorio Juego
 void tirar_carta(int carta_a_jugar, char* origen){
   char* carta = (char*)malloc(sizeof(char)*30);
   carta_a_jugar--;
@@ -196,6 +206,7 @@ void tirar_carta(int carta_a_jugar, char* origen){
   mover_archivo(origen,destino);
 }
 
+//Funcion que elimina la carta dado su nombre y el directorio en que se encuentra
 void eliminar_carta(char* origen, int carta_a_jugar){
   char* carta = (char*)malloc(sizeof(char)*30);
   carta_a_jugar--;
@@ -205,21 +216,12 @@ void eliminar_carta(char* origen, int carta_a_jugar){
 }
 
 int main(){
-  //Hola
-  //crear_directorios();
-  //crear_numeros1_9();
-  //crear_0();
-  //crear_especiales();
-  //repartir_cartas();
-  //mover_archivo("Mazo/7 verde.txt","Jugador1/7 verde.txt");
-  //mover_archivo("Mazo/+4.txt","Jugador1/+4.txt");
-  //mover_archivo("Mazo/+2 verde.txt","Jugador1/+2 verde.txt");
-  ver_archivos("Jugador2");
-  int carta_a_jugar;
-  printf("Ingrese carta a jugar: \n");
-  scanf("%d", &carta_a_jugar);
-  char origen[50] = "Jugador2/";
-  /*tirar_carta(carta_a_jugar, origen);*/
-  eliminar_carta(origen,carta_a_jugar);
+  ///Creacion de directorios y de las cartas///////////
+  crear_directorios();
+  crear_numeros1_9();
+  crear_0();
+  crear_especiales();
+  //Se reparten 7 cartas a cada jugador
+  repartir_cartas();
   return 0;
 }
