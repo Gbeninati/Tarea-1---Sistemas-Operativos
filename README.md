@@ -13,5 +13,5 @@ Consideraciones:
 
 Instrucciones:
 - Abrir el terminal en el directorio en que se encuentra el archivo
-- Escribir comando "make"
-- Escribir la linea "./avance1"
+- Escribir comando: make
+- Escribir la linea: ./avance1
