@@ -12,6 +12,7 @@ Funciones de Gianni :
 - crear_numeros1_9
 - crear_especiales
 - mover_archivo
+
 Funciones David:
 - escoger_carta_random
 - repartir_cartas
