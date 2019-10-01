@@ -6,6 +6,7 @@ Integrantes:
 - David Monsalves
 
 Avances de cada integrante:
+
 Funciones de Gianni :
 - crear_directorios
 - crear_0
