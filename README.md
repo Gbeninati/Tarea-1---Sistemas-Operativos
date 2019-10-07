@@ -33,6 +33,7 @@ AVANCE 2
 
 Consideraciones:
 - Al tirar un cambio de color y luego un +4, el programa se cae, se reparara para la entrega final
+- El avance 2 se encuentra en el archivo Avance2.c
 
 
 
