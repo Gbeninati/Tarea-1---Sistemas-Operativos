@@ -396,9 +396,7 @@ int verificar_carta_jugada(char* carta_actual){
   else if(carta_actual[0] == 's'){
     return 2; //Indica que el jugador ya fue saltado para no ser saltado nuevamente
   }
-  else{
-    return 3;
-  }
+  return 3;
 }
 
 // Funcion que verifica la carta que acabo de lanzar.
