@@ -420,12 +420,12 @@ int verificar_carta_lanzada(char* carta_actual){
 
 int main(){
   ///Creacion de directorios y de las cartas///////////
-  /*crear_directorios();
+  crear_directorios();
   crear_numeros1_9();
   crear_0();
   crear_especiales();
   //Se reparten 7 cartas a cada jugador
-  repartir_cartas();*/
+  repartir_cartas();
   int cont = 0;
   int c;
   char jugador[30]; //Almacena Jugador actual
