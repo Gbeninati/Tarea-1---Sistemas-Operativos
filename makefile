@@ -1,3 +1,3 @@
 all:
-	gcc -Wall Avance2.c -o avance2
+	gcc Avance2.c -o avance2
 	./avance2
