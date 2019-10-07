@@ -295,7 +295,7 @@ void eliminar_carta(char* origen, int carta_a_jugar){
 int tirar_carta(int carta_a_jugar, char* origen){
   char carta[30];
   char carta_actual[30];
-  printf("ESTOUYYYYSDSADAS AQUIII");
+  //printf("ESTOUYYYYSDSADAS AQUIII");
   encontrar_carta("Juego",0,carta_actual);
   carta_a_jugar--;
   encontrar_carta(origen, carta_a_jugar,carta);
