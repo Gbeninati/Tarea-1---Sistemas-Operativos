@@ -31,12 +31,28 @@ Consideraciones:
 
 AVANCE 2
 
+
 Consideraciones:
-- Al tirar un cambio de color y luego un +4, el programa se cae, se reparara para la entrega final
-- El avance 2 se encuentra en el archivo Avance2.c
+- Para el avance 2 se realizaron 2 archivos: avance2a.c y avance2b.c
 
 
+Consideraciones Avance2a:
+- El avance2a incluye las reglas del juego y permite que un solo jugador juegue contra el mismo
+- Al tirar un cambio de color y luego un +4, el programa se cae, se arreglara esto para la entrega final
+- Este archivo se encuntra en la carpera Avance2a
 
-Instrucciones:
+
+Consideraciones Avance2b:
+- El avance2b se enfoca en el uso de pipes y comunica a cada proceso si es o no su turno. El programa crea 3 procesos hijos y de manera ciclica pasa de turno, imprimiendo el jugador que se encuentra en el turno actual (cada proceso es un jugador). Se comienza con el Jugador 1, luego se continua al 2 y asi sucesivamente hasta completar un ciclo. Cuando es el turno del Jugador 1 nuevamente, se pregunta si se quiere cambiar de rumbo (opcion 1), continuar con el rumbo actual (opcion 2), o terminar el programa (opcion 0). Si se cambia el rumbo, el siguiente Jugador es el 4, luego 3, continuando.
+
+
+Instrucciones para correr avance2a:
+- Dirigirse al directorio Avance2a
+- Abrir el terminal en el directorio en que se encuentra el archivo
+- Escribir comando: make
+
+
+Instrucciones para correr avance2b:
+- Dirigirse al directorio Avance2b
 - Abrir el terminal en el directorio en que se encuentra el archivo
 - Escribir comando: make
